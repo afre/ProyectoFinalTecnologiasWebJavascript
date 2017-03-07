@@ -1,1 +1,96 @@
-totalBytesLess","type":"number"},"filenameRegex":{"optional":true,"name":"filenameRegex","type":"string"},"urlRegex":{"optional":true,"name":"urlRegex","type":"string"},"finalUrlRegex":{"optional":true,"name":"finalUrlRegex","type":"string"},"limit":{"optional":true,"name":"limit","type":"integer"},"orderBy":{"optional":true,"name":"orderBy","type":"array","items":{"type":"string"}},"id":{"optional":true,"name":"id","type":"integer"},"url":{"optional":true,"name":"url","type":"string"},"finalUrl":{"optional":true,"name":"finalUrl","type":"string"},"filename":{"optional":true,"name":"filename","type":"string"},"danger":{"optional":true,"name":"danger","$ref":"downloads.DangerType"},"mime":{"optional":true,"name":"mime","type":"string"},"startTime":{"optional":true,"name":"startTime","type":"string"},"endTime":{"optional":true,"name":"endTime","type":"string"},"state":{"optional":true,"name":"state","$ref":"downloads.State"},"paused":{"optional":true,"name":"paused","type":"boolean"},"error":{"optional":true,"name":"error","$ref":"downloads.InterruptReason"},"bytesReceived":{"optional":true,"name":"bytesReceived","type":"number"},"totalBytes":{"optional":true,"name":"totalBytes","type":"number"},"fileSize":{"optional":true,"name":"fileSize","type":"number"},"exists":{"optional":true,"name":"exists","type":"boolean"}}},{"type":"object","id":"downloads.StringDelta","properties":{"previous":{"optional":true,"name":"previous","type":"string"},"current":{"optional":true,"name":"current","type":"string"}}},{"type":"object","id":"downloads.DoubleDelta","properties":{"previous":{"optional":true,"name":"previous","type":"number"},"current":{"optional":true,"name":"current","type":"number"}}},{"type":"object","id":"downloads.BooleanDelta","properties":{"previous":{"optional":true,"name":"previous","type":"boolean"},"current":{"optional":true,"name":"current","type":"boolean"}}},{"inline_doc":true,"type":"object","id":"downloads.DownloadDelta","properties":{"id":{"name":"id","type":"integer"},"url":{"optional":true,"name":"url","$ref":"downloads.StringDelta"},"finalUrl":{"optional":true,"name":"finalUrl","$ref":"downloads.StringDelta"},"filename":{"optional":true,"name":"filename","
+import {Component, OnInit, Input} from '@angular/core';
+import {Http, Response} from "@angular/http";
+import {MasterUrlService} from "../master-url.service";
+import {NgForm} from "@angular/forms";
+
+@Component({
+  selector: 'app-ministerio',
+  templateUrl: './ministerio.component.html',
+  styleUrls: ['./ministerio.component.css']
+})
+export class MinisterioComponent implements OnInit {
+  ministerios=[];
+  nuevoMinisterio={};
+
+
+  constructor(private _http:Http,private _masterURL:MasterUrlService) { }
+
+  ngOnInit() {
+
+    this.listarMinisterio();
+
+  }
+
+
+
+  crearMinisterio(formulario: NgForm) {
+
+
+    this._http.post(this._masterURL.url + "ministerio", {
+      nombreMinisterio: formulario.value.nombreMinisterio,
+
+    }).subscribe(
+      (res) => {
+
+        this.ministerios.push(res.json());
+        this.ministerios[this.ministerios.length-1].formularioCerrado=true;
+        this.nuevoMinisterio = {};
+
+      },
+      (err) => {
+        console.log("Ocurrio un error", err);
+      }
+    );
+
+
+  }
+
+  listarMinisterio(){
+    this._http.get(this._masterURL.url+"ministerio")
+      .subscribe(
+        (res:Response)=>{
+          this.ministerios=res.json().map((value)=>{
+            value.formularioCerrado=true;
+            return value;
+          });
+
+        },
+        (err) => {
+          console.log("Ocurrio un error", err);
+        }
+      );
+
+  }
+
+  borrarMinisterio(id: number) {
+    this._http.delete(this._masterURL.url + "ministerio/" + id)
+      .subscribe(
+        (res) => {
+          let ministerioBorrado = res.json();
+          this.ministerios = this.ministerios.filter(value => ministerioBorrado.id != value.id);
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+  }
+
+  editarMinisterio(ministerio: any) {
+    let parametros = {
+      nombre: ministerio.nombre,
+      preferencia:ministerio.preferencia,
+      fechaNacimiento:ministerio.fechaNacimiento
+    };
+    this._http.put(this._masterURL.url + "ministerio/" + ministerio.id, parametros)
+      .subscribe(
+        (res: Response) => {
+          ministerio.formularioCerrado = !ministerio.formularioCerrado;
+
+        },
+        (err) => {
+          console.log("Error:", err);
+        }
+      )
+  }
+
+}

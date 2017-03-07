@@ -1,7 +1,7 @@
 /**
- * Sirve_enController
+ * AudioPodcastController
  *
- * @description :: Server-side logic for managing sirve_ens
+ * @description :: Server-side logic for managing audiopodcasts
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 

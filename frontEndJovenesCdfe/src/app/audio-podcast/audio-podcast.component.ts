@@ -1,14 +1,13 @@
-import {Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {Http, Response} from "@angular/http";
 import {MasterUrlService} from "../master-url.service";
 import {NgForm} from "@angular/forms";
-import {ActivatedRoute} from "@angular/router";
-
 
 @Component({
-  selector: 'app-audioPodcast',
-  templateUrl: './audioPodcast.component.html',
-  styleUrls: ['./audioPodcast.component.css']
+  selector: 'app-audio-podcast',
+  templateUrl: './audio-podcast.component.html',
+  styleUrls: ['./audio-podcast.component.css']
 })
 export class AudioPodcastComponent implements OnInit {
 

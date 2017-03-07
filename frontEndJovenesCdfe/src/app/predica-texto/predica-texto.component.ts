@@ -4,11 +4,10 @@ import {MasterUrlService} from "../master-url.service";
 import {NgForm} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
 
-
 @Component({
-  selector: 'app-predicaTexto',
-  templateUrl: './predicaTexto.component.html',
-  styleUrls: ['./predicaTexto.component.css']
+  selector: 'app-predica-texto',
+  templateUrl: './predica-texto.component.html',
+  styleUrls: ['./predica-texto.component.css']
 })
 export class PredicaTextoComponent implements OnInit {
 

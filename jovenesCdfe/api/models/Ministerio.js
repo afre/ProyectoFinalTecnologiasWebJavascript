@@ -11,8 +11,8 @@ module.exports = {
     nombreMinisterio:{
       type:'string'
     },
-    sirveEn:{
-      collection:'Sirve_en',
+    sirveEns:{
+      collection:'sirveEn',
       via:'idMinisterio'
     }
   }

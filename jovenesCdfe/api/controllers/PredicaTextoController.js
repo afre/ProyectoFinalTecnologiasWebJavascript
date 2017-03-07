@@ -1,7 +1,7 @@
 /**
- * Predica_en_textoController
+ * PredicaTextoController
  *
- * @description :: Server-side logic for managing predica_en_textoes
+ * @description :: Server-side logic for managing predicatextoes
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 

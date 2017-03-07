@@ -4,11 +4,10 @@ import {MasterUrlService} from "../master-url.service";
 import {NgForm} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
 
-
 @Component({
-  selector: 'app-sirveEn',
-  templateUrl: './sirveEn.component.html',
-  styleUrls: ['./sirveEn.component.css']
+  selector: 'app-sirve-en',
+  templateUrl: './sirve-en.component.html',
+  styleUrls: ['./sirve-en.component.css']
 })
 export class SirveEnComponent implements OnInit {
 

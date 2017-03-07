@@ -1,7 +1,7 @@
 /**
- * Audio_podcastController
+ * FotoReunionController
  *
- * @description :: Server-side logic for managing audio_podcasts
+ * @description :: Server-side logic for managing fotoreunions
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
