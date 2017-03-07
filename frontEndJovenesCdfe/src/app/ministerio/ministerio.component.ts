@@ -77,9 +77,8 @@ export class MinisterioComponent implements OnInit {
 
   editarMinisterio(ministerio: any) {
     let parametros = {
-      nombre: ministerio.nombre,
-      preferencia:ministerio.preferencia,
-      fechaNacimiento:ministerio.fechaNacimiento
+      nombreMinisterio: ministerio.nombreMinisterio,
+
     };
     this._http.put(this._masterURL.url + "ministerio/" + ministerio.id, parametros)
       .subscribe(
