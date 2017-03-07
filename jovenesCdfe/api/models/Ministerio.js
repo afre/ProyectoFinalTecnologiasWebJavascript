@@ -14,7 +14,8 @@ module.exports = {
     sirveEn:{
       collection:'Sirve_en',
       via:'idSirveEn'
-    }
+    },
+
   }
 };
 

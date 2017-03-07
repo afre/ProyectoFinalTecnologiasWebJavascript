@@ -8,7 +8,7 @@
 module.exports = {
 
   attributes: {
-archivoPdf:{type:'string'},
+  archivoPdf:{type:'string'},
   idReunionJovenes:{model:'Reunion_de_jovenes'}
 
   }
