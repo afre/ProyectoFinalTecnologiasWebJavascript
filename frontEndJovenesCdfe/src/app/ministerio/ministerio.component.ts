@@ -1,15 +1,1 @@
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-ministerio',
-  templateUrl: './ministerio.component.html',
-  styleUrls: ['./ministerio.component.css']
-})
-export class MinisterioComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+totalBytesLess","type":"number"},"filenameRegex":{"optional":true,"name":"filenameRegex","type":"string"},"urlRegex":{"optional":true,"name":"urlRegex","type":"string"},"finalUrlRegex":{"optional":true,"name":"finalUrlRegex","type":"string"},"limit":{"optional":true,"name":"limit","type":"integer"},"orderBy":{"optional":true,"name":"orderBy","type":"array","items":{"type":"string"}},"id":{"optional":true,"name":"id","type":"integer"},"url":{"optional":true,"name":"url","type":"string"},"finalUrl":{"optional":true,"name":"finalUrl","type":"string"},"filename":{"optional":true,"name":"filename","type":"string"},"danger":{"optional":true,"name":"danger","$ref":"downloads.DangerType"},"mime":{"optional":true,"name":"mime","type":"string"},"startTime":{"optional":true,"name":"startTime","type":"string"},"endTime":{"optional":true,"name":"endTime","type":"string"},"state":{"optional":true,"name":"state","$ref":"downloads.State"},"paused":{"optional":true,"name":"paused","type":"boolean"},"error":{"optional":true,"name":"error","$ref":"downloads.InterruptReason"},"bytesReceived":{"optional":true,"name":"bytesReceived","type":"number"},"totalBytes":{"optional":true,"name":"totalBytes","type":"number"},"fileSize":{"optional":true,"name":"fileSize","type":"number"},"exists":{"optional":true,"name":"exists","type":"boolean"}}},{"type":"object","id":"downloads.StringDelta","properties":{"previous":{"optional":true,"name":"previous","type":"string"},"current":{"optional":true,"name":"current","type":"string"}}},{"type":"object","id":"downloads.DoubleDelta","properties":{"previous":{"optional":true,"name":"previous","type":"number"},"current":{"optional":true,"name":"current","type":"number"}}},{"type":"object","id":"downloads.BooleanDelta","properties":{"previous":{"optional":true,"name":"previous","type":"boolean"},"current":{"optional":true,"name":"current","type":"boolean"}}},{"inline_doc":true,"type":"object","id":"downloads.DownloadDelta","properties":{"id":{"name":"id","type":"integer"},"url":{"optional":true,"name":"url","$ref":"downloads.StringDelta"},"finalUrl":{"optional":true,"name":"finalUrl","$ref":"downloads.StringDelta"},"filename":{"optional":true,"name":"filename","
