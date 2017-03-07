@@ -8,7 +8,13 @@
 module.exports = {
 
   attributes: {
-
+    nombre_Ministerio:{
+      type:'string'
+    },
+    sirveEn:{
+      collection:'Sirve_en',
+      via:'idSirveEn'
+    }
   }
 };
 
