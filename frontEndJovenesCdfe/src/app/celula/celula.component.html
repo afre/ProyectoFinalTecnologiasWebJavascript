@@ -1,3 +1,45 @@
-<p>
-  celula works!
-</p>
+<h1>Celula</h1>
+
+<form action="submit"
+<div class="container">
+  <div class="form-group">
+    <label>Sector Celula</label>
+    <input type="text"
+           class="form-control"
+           name="sector_Celula"
+           [(ngModel)]="Celula.sector_Celula"
+    >
+  </div>
+  <div class="form-group">
+    <label>Edad minima</label>
+    <input type="text"
+           class="form-control"
+           name="edad_Minima"
+           [(ngModel)]="Celula.edad_Minima"
+    >
+  </div>
+  <div class="form-group">
+    <label>Edad Maxima</label>
+    <input type="text"
+           class="form-control"
+           name="edad_Maxima"
+           [(ngModel)]="Celula.edad_Maxima"
+    >
+  </div>
+  <div class="form-group">
+    <label>Id Lider</label>
+    <input type="text"
+           class="form-control"
+           name="id_Lider"
+           [(ngModel)]="Celula.id_Lider"
+    >
+  </div>
+  <button class="btn btn-block btn-success" (click)="crearProducto(nuevoProducto.nombre)">Crear Producto</button>
+
+  <div class="row">
+    <div class="col-sm-12" *ngFor="let producto of productos">
+      <h1>{{producto.nombre}}</h1>
+      <p>ID:{{producto.id}}</p>
+    </div>
+  </div>
+</div>

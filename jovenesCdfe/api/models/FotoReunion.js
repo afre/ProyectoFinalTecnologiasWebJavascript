@@ -8,7 +8,15 @@
 module.exports = {
 
   attributes: {
-
+    idReunionJovenes:{
+      model:'Reunion_de_jovenes'
+    },
+    archivo_Foto:{
+      type: 'string'
+    }
   }
+
+
+
 };
 
