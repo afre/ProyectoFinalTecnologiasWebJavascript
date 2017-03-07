@@ -1,7 +1,7 @@
 /**
- * Reunion_de_jovenesController
+ * ReunionJovenesController
  *
- * @description :: Server-side logic for managing reunion_de_jovenes
+ * @description :: Server-side logic for managing reunionjovenes
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 

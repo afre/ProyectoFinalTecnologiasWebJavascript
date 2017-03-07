@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PredicaEnTextoComponent } from './predica-en-texto.component';
+import { PredicaTextoComponent } from './predica-texto.component';
 
-describe('PredicaEnTextoComponent', () => {
-  let component: PredicaEnTextoComponent;
-  let fixture: ComponentFixture<PredicaEnTextoComponent>;
+describe('PredicaTextoComponent', () => {
+  let component: PredicaTextoComponent;
+  let fixture: ComponentFixture<PredicaTextoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PredicaEnTextoComponent ]
+      declarations: [ PredicaTextoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PredicaEnTextoComponent);
+    fixture = TestBed.createComponent(PredicaTextoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
