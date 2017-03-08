@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http, Response} from "@angular/http";
-import {MasterURlService} from "../services/master-url.service";
 import {NgForm} from "@angular/forms";
+import {MasterUrlService} from "../services/master-url.service";
 @Component({
   selector: 'app-celula',
   templateUrl: './celula.component.html',
@@ -9,13 +9,14 @@ import {NgForm} from "@angular/forms";
 })
 export class CelulaComponent implements OnInit {
 
-  constructor(private _ActivatedRoute: ActivatedRoute,
+/*  constructor(private _ActivatedRoute:ActivatedRoute,
               private _http:Http,
-              private _masterURL:MasterURlService  ) {
+              private _masterURL:MasterUrlService  ) {
 
-  }
+  }*/
 
   ngOnInit() {
+/*
     crearCelula(formulario: NgForm){
       let Celula = {
         sector_Celula:formulario.value.sector_Celula,
@@ -32,8 +33,9 @@ export class CelulaComponent implements OnInit {
           (err)=>{
             console.log("Error:",err);
           }
-        )
+        )*/
     }
+
 
 
 

@@ -13,13 +13,13 @@ export const routes:Routes=[
   {path: 'inicio', component:InicioComponent},
   {path: 'ministerio', component: MinisterioComponent},
   {path: 'creyente', component: CreyenteComponent},
-  // {path: 'reunionJovenes', component: ReunionJovenesComponent},
-  // {path: 'reunionJovenes/:idReunionJovenes/fotoReunion', component: FotoReunionComponent},
-  // {path: 'reunionJovenes/:idReunionJovenes/audioPodcast', component: AudioPodcastComponent},
-  // {path: 'reunionJovenes/:idReunionJovenes/predicaTexto', component: PredicaTextoComponent},
-  // {path: 'creyente/:idCreyente/celula', component: CelulaComponent},
-  // {path: 'creyente/:idCreyente/sirveEn', component: SirveEnComponent},
-  // {path: '', redirectTo: 'inicio', pathMatch: 'full'}
+  {path: 'reunionJovenes', component: ReunionJovenesComponent},
+  {path: 'reunionJovenes/:idReunionJovenes/fotoReunion', component: FotoReunionComponent},
+  {path: 'reunionJovenes/:idReunionJovenes/audioPodcast', component: AudioPodcastComponent},
+  {path: 'reunionJovenes/:idReunionJovenes/predicaTexto', component: PredicaTextoComponent},
+  {path: 'creyente/:idCreyente/celula', component: CelulaComponent},
+  {path: 'creyente/:idCreyente/sirveEn', component: SirveEnComponent},
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 
 export const routing:ModuleWithProviders=RouterModule.forRoot(routes);
