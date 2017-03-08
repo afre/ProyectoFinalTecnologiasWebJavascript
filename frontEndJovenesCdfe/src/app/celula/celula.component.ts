@@ -9,11 +9,11 @@ import {MasterUrlService} from "../services/master-url.service";
 })
 export class CelulaComponent implements OnInit {
 
-/*  constructor(private _ActivatedRoute:ActivatedRoute,
+  constructor(/*private _ActivatedRoute:ActivatedRoute,
               private _http:Http,
-              private _masterURL:MasterUrlService  ) {
+              private _masterURL:MasterUrlService  */) {
 
-  }*/
+  }
 
   ngOnInit() {
 /*
