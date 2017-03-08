@@ -12,11 +12,11 @@ module.exports = {
         type:'string'
       } ,
       fotos_Reuniones:{
-        collection: 'Foto_reunion',
+        collection: 'FotoReunion',
         via: 'idReunionJovenes'
       },
       audios_Podcasts:{
-        collection: 'Audio_podcast',
+        collection: 'AudioPodcast',
         via: 'idReunionJovenes'
       },
       predicas_En_Texto:{
@@ -24,7 +24,7 @@ module.exports = {
         via: 'idReunionJovenes'
       },
       creyentes:{
-        collection: 'Reunion_de_jovenes',
+        collection: 'Creyente',
         via: 'reuniones_de_jovenes'
       }
 

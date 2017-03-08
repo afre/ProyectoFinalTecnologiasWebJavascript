@@ -34,7 +34,7 @@ module.exports = {
       type:'boolean'
     },
     reuniones_de_jovenes:{
-      collection:'Reunion_de_jovenes',
+      collection:'ReunionJovenes',
       via:'creyentes'
     }
 

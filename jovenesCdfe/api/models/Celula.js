@@ -17,7 +17,7 @@ module.exports = {
     edad_Maxima:{
       type:'int'
     },
-    id_Lider:{
+    idLider:{
       model:'Creyente'
     },
     Creyentes:{

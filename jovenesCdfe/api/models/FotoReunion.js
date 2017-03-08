@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
     idReunionJovenes:{
-      model:'Reunion_de_jovenes'
+      model:'ReunionJovenes'
     },
     archivo_Foto:{
       type: 'string'
