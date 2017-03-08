@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
     archivoMp3:{type:'string'},
-    idReunionJovenes:{model:'ReunionJovenes'}
+    idReunionJovenes:{model:'reunionJovenes'}
   }
 };
 

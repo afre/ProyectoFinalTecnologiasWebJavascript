@@ -9,6 +9,7 @@ import {PredicaTextoComponent} from "./predica-texto/predica-texto.component";
 import {CelulaComponent} from "./celula/celula.component";
 import {SirveEnComponent} from "./sirve-en/sirve-en.component";
 import {ModuleWithProviders} from "@angular/core";
+
 export const routes:Routes=[
   {path: 'inicio', component:InicioComponent},
   {path: 'ministerio', component: MinisterioComponent},

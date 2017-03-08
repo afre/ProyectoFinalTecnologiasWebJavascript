@@ -8,22 +8,6 @@
 module.exports = {
 
   attributes: {
-    sector_Celula:{
-      type:'string'
-    },
-    edad_Minima:{
-      type:'int'
-    },
-    edad_Maxima:{
-      type:'int'
-    },
-    idLider:{
-      model:'Creyente'
-    },
-    Creyentes:{
-      collection: 'Creyente',
-      via: 'idCelula'
-    }
 
   }
 };

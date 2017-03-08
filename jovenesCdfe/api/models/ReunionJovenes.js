@@ -8,25 +8,6 @@
 module.exports = {
 
   attributes: {
-      tema_Reunion:{
-        type:'string'
-      } ,
-      fotos_Reuniones:{
-        collection: 'FotoReunion',
-        via: 'idReunionJovenes'
-      },
-      audios_Podcasts:{
-        collection: 'AudioPodcast',
-        via: 'idReunionJovenes'
-      },
-      predicas_En_Texto:{
-        collection: 'Predica_en_texto',
-        via: 'idReunionJovenes'
-      },
-      creyentes:{
-        collection: 'Creyente',
-        via: 'reuniones_de_jovenes'
-      }
 
   }
 };
