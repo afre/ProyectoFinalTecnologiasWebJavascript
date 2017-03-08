@@ -12,7 +12,7 @@ module.exports = {
       type:'string'
     },
     sirveEns:{
-      collection:'sirveEn',
+      collection:'SirveEn',
       via:'idMinisterio'
     }
   }

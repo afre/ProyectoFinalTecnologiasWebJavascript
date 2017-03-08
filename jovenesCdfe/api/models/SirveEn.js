@@ -10,8 +10,8 @@ module.exports = {
   attributes: {
     fechaInicio:{type:'date'},
     fechaFin:{type:'date'},
-    idMinisterio:{model:'ministerio'},
-    idCreyente:{model:'creyente'}
+    idMinisterio:{model:'Ministerio'},
+    idCreyente:{model:'Creyente'}
   }
 };
 

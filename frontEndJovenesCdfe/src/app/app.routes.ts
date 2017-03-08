@@ -19,7 +19,7 @@ export const routes:Routes=[
   {path: 'reunionJovenes/:idReunionJovenes/audioPodcast', component: AudioPodcastComponent},
   {path: 'reunionJovenes/:idReunionJovenes/predicaTexto', component: PredicaTextoComponent},
   {path: 'creyente/:idCreyente/celula', component: CelulaComponent},
-  {path: 'creyente/:idCreyente/sirveEn', component: SirveEnComponent},
+  {path: 'ministerio/:idMinisterio/sirveEn', component: SirveEnComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 
