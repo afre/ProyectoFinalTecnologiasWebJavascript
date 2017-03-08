@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Http, Response} from "@angular/http";
-import {MasterUrlService} from "../master-url.service";
+import {MasterUrlService} from "../services/master-url.service";
 import {NgForm} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
 
